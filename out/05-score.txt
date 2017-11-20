@@ -1,0 +1,7 @@
+The highest grade: 97
+The lowest grade: 22
+Average grade: 69
+Number of grade 60-69: 14
+Number of grade 70-79: 13
+Number of grade 80-89: 11
+Number of grade 90-100: 3
