@@ -43,9 +43,9 @@ public class Linear {
 	public static void main(String[] args) {
 		try {
 			PrintStream ps = new PrintStream(new FileOutputStream("out/04-linear.txt"));
-        	System.setOut(ps);
-        	linear("data/LR_ex0.txt");
-        	linear("data/LR_ex1.txt");
+			System.setOut(ps);
+			linear("data/LR_ex0.txt");
+			linear("data/LR_ex1.txt");
 		} catch (IOException e) {
 			System.out.println("Failed to open file!");
 			System.exit(-1);
