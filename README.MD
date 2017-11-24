@@ -11,7 +11,7 @@ Index | Java Main Class File  |   Output File   |    Title
 05    | Score.java            | 05-score.txt    |  统计学生成绩
 06    |                       |                 |  图形用户界面 - 模拟计算器
 06    |                       |                 |  图形用户界面 - 五子棋游戏
-07    |                       |                 |  JDBC方式操作数据库
+07    | JBDC.java             | 07-jdbc.txt     |  JDBC方式操作数据库
 08    |                       |                 |  网络编程基础
 09    |                       |                 |  二维码的编码和解码
 10    |                       |                 |  重复文件的查询
