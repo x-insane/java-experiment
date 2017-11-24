@@ -21,12 +21,13 @@ class Student {
 		this.conn = conn;
 	}
 
-	public Student insert(String name, int age) {
+	public Student insert(int id, String name, int age) {
 		try {
-			String sql = "INSERT INTO "+ table +" (name, age) VALUE (?, ?)";
+			String sql = "INSERT INTO "+ table +" (id, name, age) VALUE (?, ?, ?)";
 			PreparedStatement preparedStmt = conn.prepareStatement(sql);
-			preparedStmt.setString(1, name);
-			preparedStmt.setInt(2, age);
+			preparedStmt.setInt(1, id);
+			preparedStmt.setString(2, name);
+			preparedStmt.setInt(3, age);
 			preparedStmt.execute();
 			preparedStmt.close();
 		} catch (SQLException e) {
@@ -107,7 +108,7 @@ class Student {
 		try {
 			Statement stmt = conn.createStatement();
 			String sql = "CREATE TABLE IF NOT EXISTS "+ table +" ( "+
-				"id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, "+
+				"id INT(11) PRIMARY KEY NOT NULL, "+
 				"name TINYTEXT NOT NULL, "+
 				"age INT(3) NOT NULL"+
 			") DEFAULT CHARSET=utf8";
@@ -176,9 +177,10 @@ public class JDBC {
 		try {
 			Scanner sc = new Scanner(new File("data/student.txt"), "utf8");
 			while (sc.hasNext()) {
+				int id = sc.nextInt();
 				String name = sc.next();
 				int age = sc.nextInt();
-				stu.insert(name, age);
+				stu.insert(id, name, age);
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("Failed to open file!");
@@ -192,7 +194,7 @@ public class JDBC {
 				System.out.println("age: " + data.age);
 				System.out.println();
 				stu.modify(data.id, data.name.toUpperCase(), data.age + 1);
-				if (data.id == 4)
+				if (data.id == 204)
 					stu.delete(data.id);
 				return true;
 			}
@@ -207,8 +209,8 @@ public class JDBC {
 				return true;
 			}
 		});
-		System.out.println("Data of id = 3\r\n------------------");
-		StudentData data = stu.find(3);
+		System.out.println("Data of id = 203\r\n------------------");
+		StudentData data = stu.find(203);
 		System.out.println("id: " + data.id);
 		System.out.println("name: " + data.name);
 		System.out.println("age: " + data.age);
