@@ -1,0 +1,19 @@
+	public static String md5_file(String inputFile) throws IOException {
+		int bufferSize = 256 * 1024;
+		FileInputStream fileInputStream = null;
+		DigestInputStream digestInputStream = null;
+		try {
+			MessageDigest messageDigest =MessageDigest.getInstance("MD5");
+			fileInputStream = new FileInputStream(inputFile);
+			digestInputStream = new DigestInputStream(fileInputStream,messageDigest);
+			byte[] buffer =new byte[bufferSize];
+			while (digestInputStream.read(buffer) > 0);
+			messageDigest= digestInputStream.getMessageDigest();
+			byte[] resultByteArray = messageDigest.digest();
+			digestInputStream.close();
+			fileInputStream.close();
+			return byteArrayToHex(resultByteArray);
+		} catch (NoSuchAlgorithmException e) {
+			return null;
+		}
+	}

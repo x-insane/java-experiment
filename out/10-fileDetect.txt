@@ -1,0 +1,11 @@
+md5 = 9482111E5BBB81CED49E805BAF7C9906
+--------------------------------------
+R:\java\experiments\data\files\1.txt
+R:\java\experiments\data\files\6.txt
+R:\java\experiments\data\files\subpath\3.txt
+
+md5 = E30B8B9C97C05478798F535640BC302E
+--------------------------------------
+R:\java\experiments\data\files\2.txt
+R:\java\experiments\data\files\subpath\5.txt
+
