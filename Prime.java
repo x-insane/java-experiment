@@ -19,7 +19,7 @@ public class Prime {
 	public static void main(String args[]) {
 		try {
 			PrintStream ps = new PrintStream(new FileOutputStream("out/02-prime.txt"));
-        	System.setOut(ps);
+			System.setOut(ps);
 		} catch (IOException e) {
 			System.out.println("Failed to open file!");
 			System.exit(-1);

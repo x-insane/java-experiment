@@ -8,7 +8,7 @@ public class Score {
 		int[] part = new int[11];
 		try {
 			PrintStream ps = new PrintStream(new FileOutputStream("out/05-score.txt"));
-        	System.setOut(ps);
+			System.setOut(ps);
 			BufferedReader in = new BufferedReader(new FileReader("data/score.csv"));
 			String line = null;
 			while ((line = in.readLine()) != null) {
