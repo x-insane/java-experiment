@@ -14,4 +14,4 @@ Index | Java Main Class File  |   Output File     |    Title
 07    | JBDC.java             | 07-jdbc.xlsx      |  JDBC方式操作数据库
 08    |                       |                   |  网络编程基础
 09    |                       |                   |  二维码的编码和解码
-10    | FileDetext.java       | 10-fileDetect.txt |  重复文件的查询
+10    | FileDetect.java       | 10-fileDetect.txt |  重复文件的查询
