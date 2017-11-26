@@ -12,6 +12,6 @@ Index | Java Main Class File  |   Output File     |    Title
 06    |                       |                   |  图形用户界面 - 模拟计算器
 06    |                       |                   |  图形用户界面 - 五子棋游戏
 07    | JBDC.java             | 07-jdbc.xlsx      |  JDBC方式操作数据库
-08    |                       |                   |  网络编程基础
+08    | Spider.java           | 08-spider.txt     |  网络编程基础
 09    |                       |                   |  二维码的编码和解码
 10    | FileDetect.java       | 10-fileDetect.txt |  重复文件的查询
